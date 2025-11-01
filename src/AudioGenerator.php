@@ -11,10 +11,6 @@ class AudioGenerator
             'flat'       => __DIR__ . '/../data/flat.mp3',
         ];
 
-         if (!file_exists($ffmpegPath)) {
-                die("ffmpegPath not found");
-            }
-
         foreach ($typeToFile as $f) {
             if (!file_exists($f)) {
                 die("File not found: $f");
