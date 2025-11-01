@@ -13,6 +13,8 @@ For each detected range—**increasing**, **decreasing**, or **flat**—a corres
 - Works on **Windows, Linux, and macOS** with [FFmpeg](https://ffmpeg.org/) installed.
 
 - For windows : [Download-FFMpeg](https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.7z)
+
+- Add "ffmpeg" to environment variables for your OS
 ---
 
 ## Installation
