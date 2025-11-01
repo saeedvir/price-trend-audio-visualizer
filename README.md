@@ -15,6 +15,27 @@ For each detected range—**increasing**, **decreasing**, or **flat**—a corres
 - For windows : [Download-FFMpeg](https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.7z)
 ---
 
+## Audio Preview
+
+You can listen to the generated audio summary (example files included):
+
+### Example: Random Price Trend
+
+<audio controls>
+  <source src="data/up.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<audio controls>
+  <source src="data/down.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<audio controls>
+  <source src="data/flat.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
 ## Installation
 
 1. Clone the repository:
