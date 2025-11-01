@@ -3,13 +3,17 @@ namespace PriceTrendAudio;
 
 class AudioGenerator
 {
-    public static function joinRangeAudio(array $ranges, string $outputFile = 'output.mp3')
+    public static function joinRangeAudio(array $ranges, string $outputFile = 'output.mp3',$ffmpegPath = 'ffmpeg')
     {
         $typeToFile = [
             'increasing' => __DIR__ . '/../data/up.mp3',
             'decreasing' => __DIR__ . '/../data/down.mp3',
             'flat'       => __DIR__ . '/../data/flat.mp3',
         ];
+
+         if (!file_exists($ffmpegPath)) {
+                die("ffmpegPath not found");
+            }
 
         foreach ($typeToFile as $f) {
             if (!file_exists($f)) {
@@ -35,7 +39,7 @@ class AudioGenerator
         }
         file_put_contents($listFile, $content);
 
-        $cmd = "ffmpeg -y -f concat -safe 0 -i $listFile -c copy $outputFile 2>&1";
+        $cmd = "$ffmpegPath -y -f concat -safe 0 -i $listFile -c copy $outputFile 2>&1";
         exec($cmd, $output, $returnVar);
 
         unlink($listFile);
